@@ -1,3 +1,5 @@
+![Workflow DAG](dag.png)
+
 login to maxwell
 
 clone this repo
