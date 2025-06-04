@@ -1,0 +1,21 @@
+executor: slurm
+
+default-resources:
+    slurm_partition: "allcpu"
+    slurm_account: "cssb"
+    mem_mb: 64000
+
+set-resources:
+    COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS:
+        slurm_partition: "vds"
+        runtime: 1000
+        mem_mb: 256000
+    CREATE_SUBDIRS_AND_COPY_FILES_MULTIMERS:
+        runtime: 1000
+    FILTER_OUT_TEMPLATES:
+        runtime: 1000
+    COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS:
+        slurm_partition: "vds"
+        nodes: 1
+        runtime: 10000
+        slurm_extra: "'--constraint=(A100|H100)'"
