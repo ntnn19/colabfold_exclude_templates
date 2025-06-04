@@ -6,7 +6,7 @@ clone this repo
 
 git clone https://github.com/ntnn19/colabfold_exclude_templates
 
-# active the environment
+# activate the environment
 
 module load maxwell mamba
 
