@@ -1,8 +1,12 @@
+![Workflow DAG](dag.png)
+# set up the workflow
 login to maxwell
 
 clone this repo
 
 git clone https://github.com/ntnn19/colabfold_exclude_templates
+
+# activate the environment
 
 module load maxwell mamba
 
@@ -14,5 +18,6 @@ check example.cmd to see how to run the workflow
 
 edit config/config.yaml with your favourite text editor
 
-run the workflow
+# run the workflow:
+
 ./run.sh input output ../../singularity_containers/colabfold/weights ../../colabfolddb ../../af2db/AlphaFold/pdb_mmcif/mmcif_files
