@@ -67,6 +67,6 @@ rule COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS:
         CONTAINER
     shell:
         """
-        colabfold_batch /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}.a3m /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q} --templates --pdb-hit-file /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}_pdb100_230517_filtered.m8 --local-pdb-path /mmcif_dir
+        colabfold_batch /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}.a3m /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q} --templates --pdb-hit-file /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}_pdb100_230517_filtered.m8 --local-pdb-path /mmcif_dir
         """
 
