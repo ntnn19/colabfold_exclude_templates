@@ -12,4 +12,7 @@ mamba activate /gpfs/cssb/group/cssb-topf/natan/colabfold_structure_prediction_w
 
 check example.cmd to see how to run the workflow
 
+edit config/config.yaml with your favourite text editor
+
 run the workflow
+./run.sh input output ../../singularity_containers/colabfold/weights ../../colabfolddb ../../af2db/AlphaFold/pdb_mmcif/mmcif_files
