@@ -38,7 +38,8 @@ rule CREATE_SUBDIRS_AND_COPY_FILES_MULTIMERS:
     input:
         os.path.join(OUTDIR,"predictions","COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS","{q}.a3m")
     output:
-         os.path.join(OUTDIR,"predictions","COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS","{q}","{q}.a3m")
+         os.path.join(OUTDIR,"predictions","COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS","{q}","{q}.a3m"),
+         os.path.join(OUTDIR,"predictions","COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS","{q}","{q}_pdb100_230517.m8")
     shell:
         """
         python create_compatible_dir_structure.py {wildcards.q} output/predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS --use-templates
@@ -67,6 +68,6 @@ rule COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS:
         CONTAINER
     shell:
         """
-        colabfold_batch /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}.a3m /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q} --templates --pdb-hit-file /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}_pdb100_230517_filtered.m8 --local-pdb-path /mmcif_dir
+        colabfold_batch /predictions/COLABFOLD_SEARCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}.a3m /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q} --templates --pdb-hit-file /predictions/COLABFOLD_BATCH_TEMPLATE_BASED_MULTIMERS/{wildcards.q}/{wildcards.q}_pdb100_230517_filtered.m8 --local-pdb-path /mmcif_dir
         """
 

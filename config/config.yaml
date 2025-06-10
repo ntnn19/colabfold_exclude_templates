@@ -1,4 +1,5 @@
-input_csv: input/multimers.csv
+input_csv: /gpfs/cssb/group/cssb-topf/natan/tests/test_luca/input/multimers.csv
+#input_csv: /gpfs/cssb/group/cssb-topf/luca/c2q_revision/CF_T_revision_benchmark_seq.csv.test
 templates_to_exclude: templates_to_exclude.txt
-container: ../../singularity_containers/colabfold/colabfold_1.5.9-cuda12.2.2_parallel_fix_2bec5c7_relax_rsync_merged_to_latest.sif
+container: ../../../natan/singularity_containers/colabfold/colabfold_1.5.9-cuda12.2.2_parallel_fix_2bec5c7_relax_rsync_merged_to_latest.sif
 output_dir: output
